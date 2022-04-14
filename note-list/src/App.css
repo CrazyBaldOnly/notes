@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+*,*:before,*:after{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea{font-family: inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+/* Обнуление */
+
+#root, .App {
+    height: 100%;
+}
+.container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px 5px;
+}
+.note {
+    border: 1px solid #DEDEDE;
+    margin: 0 0 20px 0;
+    border-radius: 5px;
+    border-top: none;
+}
+.note.active .note_main{
+    height: 50px;
+    overflow: hidden;
+    /*box-shadow: inset 0 -10px 5px 1px rgba(0, 0, 0, .2);*/
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    transition: all 0.3s ease;
+    border-radius: 0 0 5px 5px;
+}
+.note:last-child {
+    margin: 0;
+}
+.note_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 3px;
+    background: #DEDEDE;
+    border-radius: 5px 5px 0 0;
+}
+.note_header__left {
+    font-size: 8px;
+    font-style: italic;
+    color: #81B8B5;
+}
+.note_main {
+    max-height: 300px;
+    min-height: 50px;
+    display: flex;
+    white-space: pre-wrap;
+    overflow: auto;
+    box-shadow: 0 3px 8px 3px rgba(0, 0, 0, .1);
+    transition: all 0.3s ease;
+}
+.note_main div {
+    flex: 1 1 auto;
+    padding: 10px;
+    width: 100%;
+}
+.note_main textarea {
+    padding: 10px;
+    flex: 1 1 auto;
+    display: block;
+    width: 100%;
+    resize: none;
+    border: 1px solid #4F6D96;
+}
+.add_note {
+    margin: 0 0 20px 0;
+    text-align: center;
+}
